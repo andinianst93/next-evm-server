@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "edus",
+  "info": {
+    "singularName": "edu",
+    "pluralName": "edus",
+    "displayName": "Topic",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "topic": {
+      "type": "string"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "topic"
+    },
+    "description": {
+      "type": "text"
+    },
+    "number": {
+      "type": "string"
+    }
+  }
+}
